@@ -4,7 +4,7 @@ import secureLocalStorage from "react-secure-storage";
 
 
 const DoneNote = (id, updateParent) => {
-    fetch('process.env.BACKEND_SERVER/donenote', {
+    fetch(process.env.REACT_APP_BACKEND_SERVER + '/donenote', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ const DoneNote = (id, updateParent) => {
 };
 
 const DeleteNote = (id, updateParent) => {
-    fetch('process.env.BACKEND_SERVER/deletenote', {
+    fetch(process.env.REACT_APP_BACKEND_SERVER + '/deletenote', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

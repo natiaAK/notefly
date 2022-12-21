@@ -48,7 +48,7 @@ function Home() {
 
   const getData = async (id) => {
     try {
-      const response = await fetch('process.env.BACKEND_SERVER/getnotes', {
+      const response = await fetch(process.env.REACT_APP_BACKEND_SERVER + '/getnotes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ function Home() {
   }, [sortValue, count])
 
   const logout = () => {
-    fetch('process.env.BACKEND_SERVER/logout', {
+    fetch(process.env.REACT_APP_BACKEND_SERVER + '/logout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
