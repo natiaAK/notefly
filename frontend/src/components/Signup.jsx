@@ -35,7 +35,7 @@ function Signup() {
 
   const handleSubmit = (email, password, confirmPassword) => {
     if (email !== null && password !== null && confirmPassword !== null && validator.isEmail(email) && validator.isLength(password, 6, 20) && password === confirmPassword) {
-      fetch('http://localhost:3000/signup', {
+      fetch('BACKEND_SERVER/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
