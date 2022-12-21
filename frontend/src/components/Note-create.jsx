@@ -30,7 +30,7 @@ function CreateNote() {
 
     const saveNote = () => {
         if (title !== null && body !== null && due_at !== null && validator.isLength(title, 0, 100) && validator.isLength(body, 0, 150) && validator.isDate(due_at) && validator.isAfter(due_at)) {
-            fetch('BACKEND_SERVER/createnote', {
+            fetch('process.env.BACKEND_SERVER/createnote', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
