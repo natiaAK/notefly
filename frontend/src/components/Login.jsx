@@ -4,7 +4,6 @@ import Footer from "./Footer";
 import { useNavigate } from 'react-router-dom';
 import secureLocalStorage from "react-secure-storage";
 
-
 function Login() {
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
@@ -27,7 +26,7 @@ function Login() {
         }
     };
     const handleSubmit = () => {
-        fetch('{process.env.BACKEND_SERVER}/login', {
+        fetch(process.env.REACT_APP_BACKEND_SERVER + '/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

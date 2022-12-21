@@ -35,7 +35,7 @@ function Signup() {
 
   const handleSubmit = (email, password, confirmPassword) => {
     if (email !== null && password !== null && confirmPassword !== null && validator.isEmail(email) && validator.isLength(password, 6, 20) && password === confirmPassword) {
-      fetch('process.env.BACKEND_SERVER/signup', {
+      fetch(process.env.REACT_APP_BACKEND_SERVER + '/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
