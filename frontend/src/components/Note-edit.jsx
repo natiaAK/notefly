@@ -35,7 +35,7 @@ function EditNote(props) {
 
     const UpdateNote = (id) => {
         if (title !== null && title !== "" && body !== null && body !== "" && due_at !== null && due_at !== "" && validator.isLength(title, 0, 100) && validator.isLength(body, 0, 150) && validator.isDate(due_at) && validator.isAfter(due_at)) {
-            fetch('BACKEND_SERVER/updatenote', {
+            fetch('process.env.BACKEND_SERVER/updatenote', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
