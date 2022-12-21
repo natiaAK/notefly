@@ -48,7 +48,7 @@ function Home() {
 
   const getData = async (id) => {
     try {
-      const response = await fetch('http://localhost:3000/getnotes', {
+      const response = await fetch('BACKEND_SERVER/getnotes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ function Home() {
   }, [sortValue, count])
 
   const logout = () => {
-    fetch('http://localhost:3000/logout', {
+    fetch('BACKEND_SERVER/logout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

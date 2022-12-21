@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
@@ -15,11 +16,11 @@ app.use(express.json());
 
 const { Pool } = require('pg')
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'postgres',
-    password: 'itan',
-    port: 5432,
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
+    database:process.env.DB_DATABASE
 });
 
 app.post("/signup", async function (req, res) {
@@ -139,6 +140,6 @@ app.post("/updatenote", async function (req, res) {
     }
 });
 
-app.listen(3000, function () {
+app.listen(process.env.LISTEN_TO, function () {
     console.log("server is runnning on port 3000");
 });
