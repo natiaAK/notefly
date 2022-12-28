@@ -1,9 +1,21 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+import secureLocalStorage from "react-secure-storage";
+
 
 function Header() {
+    const navigate = useNavigate();
+    const userId = secureLocalStorage.getItem("userId");
+    const mainStart = () => {
+        if (userId){
+            return navigate("/Main");
+        } else {
+            return navigate("/");
+        }       
+    } ;
     return (
         <header>
-            <h1>NoteFly</h1>
+            <h1 onClick={() => mainStart()} >NoteFly</h1>
         </header>
     );
 }
