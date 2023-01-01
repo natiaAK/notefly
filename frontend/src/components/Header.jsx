@@ -15,7 +15,7 @@ function Header() {
     } ;
     return (
         <header>
-            <h1 onClick={() => mainStart()} >NoteFly</h1>
+            <h1 id="logo" onClick={() => mainStart()} >NoteFly</h1>
         </header>
     );
 }

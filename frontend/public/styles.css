@@ -126,6 +126,10 @@ span,
     margin-left: 0;
 }
 
+#logo {
+    cursor: pointer;
+}
+
 #logout-btn {
     position: absolute;
     top: 0px;

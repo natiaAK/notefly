@@ -59,10 +59,10 @@ function Signup() {
         })
         ;
     } else if (email === null || !validator.isEmail(email)) {
-      setEmailSpan("Wrong email!");
+      setEmailSpan("Wrong email! Please enter a valid email");
     }
     else if (password === null || !validator.isLength(password, 6, 20)) {
-      setPasswordSpan("Invalid password!");
+      setPasswordSpan("Invalid password! Password should be at least 6 characters long!");
       setEmailSpan("");
     }
     else if (password !== confirmPassword) {
