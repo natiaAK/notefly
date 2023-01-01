@@ -53,11 +53,11 @@ function CreateNote() {
             setTitleSpan("Title is empty!");
         }
         else if (body === null || !validator.isLength(body, 0, 150)) {
-            setBodySpan("Body is empty or too long!");
+            setBodySpan("Body is empty or too long! 150 characters is maximum.");
             setTitleSpan("");
         }
         else if (due_at === null || !validator.isDate(due_at) || !validator.isAfter(due_at)) {
-            setDueSpan("Wrong date!");
+            setDueSpan("Wrong date! Date should be in future and YYYY-MM-DD format.");
             setTitleSpan("");
             setBodySpan("");
         }
