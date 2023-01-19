@@ -91,7 +91,7 @@ function CreateNote() {
                         <td id="titleSpan" >{bodySpan}</td>
                     </tr>
                     <tr>
-                        <td><input onKeyDown={(e) => handleKeyPress(e)} id="due_at" name="Due date" type="text" value={due_at} onChange={(e) => handleInputChange(e)} placeholder="Due date" /></td>
+                        <td><input onKeyDown={(e) => handleKeyPress(e)} id="due_at" name="Due date" type="date" value={due_at} onChange={(e) => handleInputChange(e)} placeholder="Due date" /></td>
                         <td id="titleSpan" >{dueSpan}</td>
                     </tr>
                     <br />
