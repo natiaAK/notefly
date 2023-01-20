@@ -140,6 +140,10 @@ app.post("/updatenote", async function (req, res) {
     }
 });
 
+app.get('/', (req, res) => {
+    res.send("Server is up")
+  })
+
 app.listen(process.env.LISTEN_TO, function () {
     console.log("server is runnning on port 3000");
 });
